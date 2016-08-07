@@ -23,8 +23,9 @@ fp1 = sp.polyfit(anos, roubos, 4)	#ultimo parametro grau da função de aproxima
 f1 = sp.poly1d(fp1)
 
 
-plt.plot(anos, f1(anos), linewidth=2)
 plt.scatter(anos,roubos)
+anos = range(2002,2020)
+plt.plot(anos, f1(anos), linewidth=2)
 plt.title("Propor"u'ç'u'ã'"o de furtos de carros por ano em Porto Alegre")
 plt.xlabel("Ano")
 plt.ylabel("N"u'ú'"mero de roubos")
