@@ -19,13 +19,13 @@ roubos = data[:,1]
 anos = anos[~sp.isnan(anos)]
 roubos = roubos[~sp.isnan(roubos)]
 
-fp1 = sp.polyfit(anos, roubos, 4)
+fp1 = sp.polyfit(anos, roubos, 4)	#ultimo parametro grau da função de aproximação
 f1 = sp.poly1d(fp1)
 
 
 plt.plot(anos, f1(anos), linewidth=2)
 plt.scatter(anos,roubos)
-plt.title("Proporcao de roubos de carros por ano em Porto Alegre")
+plt.title("Proporcao de furtos de carros por ano em Porto Alegre")
 plt.xlabel("Ano")
 plt.ylabel("Numero de roubos")
 plt.autoscale(tight=True)
